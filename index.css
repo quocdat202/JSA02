@@ -1,0 +1,7 @@
+.form_login form{
+    width: 30%;
+}
+.form_login{
+    display: flex;
+    justify-content: center;
+}

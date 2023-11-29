@@ -127,3 +127,27 @@
 .slides-img{
     margin-top:58px;
 }
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+}
+.date{
+    color: yellow;
+}
+.products-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item-pro{
+    padding: 20px;
+}
+.btn-buy{
+    padding: 5px;
+    border: none;
+    background-color: coral;
+    border-radius: 10px;
+    border-bottom: 1px solid rgb(87, 87, 255);
+}
