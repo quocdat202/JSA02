@@ -152,7 +152,7 @@
 let dataUser = JSON.parse(localStorage.getItem('account')) // đọc dữ liệu tài khoản dưới localStorage 
 
 function checkEmail(email, password, type) {
-    console.log("🤔🤔🤔 ~ file: index.js:155 ~ checkEmail ~ email:", email, password)
+    console.log("🤔🤔🤔 ~ file: index.js:155 ~ checkEmail ~ email, password, type:", email, password, type)
     let exists = false;
 
     for (let i = 0; i < dataUser.length; i++) {
@@ -163,6 +163,7 @@ function checkEmail(email, password, type) {
                     exists = true;
                 }
             } else {
+                console.log("🤔🤔🤔 ~ file: index.js:161 ~ checkEmail ~ type:", type)
                 // Nếu loại không phải 'login', chỉ cần kiểm tra email
                 exists = true;
             }
@@ -207,9 +208,12 @@ function handleLogin() {
     if (valueEmail !== '' && valuePassword !== '') {
         if (checkEmail(valueEmail, valuePassword.toString(), 'login')) {
             alert('Login successful')
+            window.location.href = 'theBand.html'
         } else {
             alert('Account not found')
         }
+    } else {
+        alert('Please enter email and password')
     }
 }
 // localStorage.setItem('account', JSON.stringify(account))
